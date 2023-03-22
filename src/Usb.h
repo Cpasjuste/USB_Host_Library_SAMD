@@ -23,7 +23,7 @@ e-mail   :  support@circuitsathome.com
 #include <stdint.h>
 
 // Uncomment to enable debug
-//#define DEBUG_USB_HOST 1
+#define DEBUG_USB_HOST 1
 
 ////////////////////////////////////////////////////////////////////////////////
 // MASS STORAGE

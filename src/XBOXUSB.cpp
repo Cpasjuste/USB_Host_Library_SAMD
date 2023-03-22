@@ -95,7 +95,7 @@ uint32_t XBOXUSB::Init(uint32_t parent, uint32_t port, uint32_t lowspeed) {
         VID = udd->idVendor;
         PID = udd->idProduct;
 
-        if(VID != XBOX_VID && VID != MADCATZ_VID && VID != JOYTECH_VID && VID != GAMESTOP_VID) // Check VID
+        if(VID != XBOX_VID && VID != MADCATZ_VID && VID != JOYTECH_VID && VID != GAMESTOP_VID && VID != HORI_GEM_VID) // Check VID
                 goto FailUnknownDevice;
         if(PID == XBOX_WIRELESS_PID) {
 #ifdef DEBUG_USB_HOST
@@ -107,7 +107,7 @@ uint32_t XBOXUSB::Init(uint32_t parent, uint32_t port, uint32_t lowspeed) {
                 Notify(PSTR("\r\nThis library only supports Xbox 360 controllers via USB"), 0x80);
 #endif
                 goto FailUnknownDevice;
-        } else if(PID != XBOX_WIRED_PID && PID != MADCATZ_WIRED_PID && PID != GAMESTOP_WIRED_PID && PID != AFTERGLOW_WIRED_PID && PID != JOYTECH_WIRED_PID) // Check PID
+        } else if(PID != XBOX_WIRED_PID && PID != MADCATZ_WIRED_PID && PID != GAMESTOP_WIRED_PID && PID != AFTERGLOW_WIRED_PID && PID != JOYTECH_WIRED_PID && PID != HORI_GEM_PID) // Check PID
                 goto FailUnknownDevice;
 
         // Allocate new address according to device class
